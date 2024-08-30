@@ -12,7 +12,7 @@ const Sidebar = ({ onClick, className }) => {
       data: [
         {
           name: "Fogin",
-          path: "/Login",
+          path: "/MyDashboard/Login",
         },
       ],
     },
@@ -22,11 +22,11 @@ const Sidebar = ({ onClick, className }) => {
       data: [
         {
           name: "Login",
-          path: "/Login",
+          path: "/MyDashboard/Login",
         },
         {
           name: "Signup",
-          path: "/Signup",
+          path: "/MyDashboard/Signup",
         },
       ],
     },

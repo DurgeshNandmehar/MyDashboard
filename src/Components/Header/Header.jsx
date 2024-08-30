@@ -10,7 +10,7 @@ import {
 import { IoIosArrowDown } from "react-icons/io";
 const Header = ({ showSidebar, className, onClick }) => {
   return (
-    <header className="absolute z-10 w-full top-0 bg-white">
+    <header className="fixed z-10 w-full top-0 bg-white">
       <Container className={`shadow-md`}>
         <FlexBetweenCenter className="py-3">
           <FlexVCenter className="text-gray-500">

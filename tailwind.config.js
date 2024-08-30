@@ -13,6 +13,7 @@ export default {
         bgImage: "url('./src/assets/bg.jpg')",
         leftArrow: "url('./src/assets/left-chevron.png')",
         rightArrow: "url('./src/assets/chevron.png')",
+        notFound: "url('./src/assets/Not-Found.svg')",
       },
     },
   },
