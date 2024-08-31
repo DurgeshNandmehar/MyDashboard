@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 import { FlexBetweenCenter, FlexVCenter } from "../Components/index";
 import { IoIosArrowDown } from "react-icons/io";
 
-const Accordion = ({ title, data, onClick }) => {
+const Accordion = ({ title, data = [], onClick }) => {
   const [showData, setShowData] = useState(false);
   return (
     <div className="mb-1 text-gray-600 ">
       <div
-        className={`py-1 flex gap-3 items-center px-1 sm:text-[18px] hover:text-secondry hover:bg-light ${
+        className={`py-2 flex gap-2 overflow-hidden items-center px-2 sm:text-lg hover:text-secondry hover:bg-light ${
           showData ? "bg-light  text-secondry" : ""
         }`}
       >
-        <span className="text-2xl">{title.icons}</span>
+        <span className="">{title.icons}</span>
         <FlexBetweenCenter
-          className="flex-grow"
+          className="flex-grow cursor-pointer"
           onClick={() => setShowData(!showData)}
         >
           {title.name}
@@ -27,6 +27,7 @@ const Accordion = ({ title, data, onClick }) => {
           />
         </FlexBetweenCenter>
       </div>
+
       <div
         className={` transition-all ease-in-out duration-[400ms] overflow-hidden `}
         style={{ height: `${showData ? data.length * 35 + 16 : 0}px` }}

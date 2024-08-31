@@ -8,10 +8,17 @@ import AllButton from "./Components/Button/AllButton";
 import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Forms/Login";
 import NotFound from "./CustomComponents/NotFound";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import Login2 from "./Components/Forms/Login2";
 
+export const MainTitle = ({ title, className }) => {
+  return (
+    <h6 className={`text-gray-600 mb-3 text-2xl ${className}`}>{title}</h6>
+  );
+};
 const Layout = () => {
   const [showSidebar, setShowSidebar] = useState(true);
-  const handleSideBar = () => {};
+
   return (
     <>
       <Header
@@ -20,13 +27,13 @@ const Layout = () => {
       />
       <Section className={``}>
         <Container className={"px-[0px] "}>
-          <div className="sm:flex bg-blue-400 overflow-hidden">
+          <div className="sm:flex overflow-hidden">
             <Sidebar
               onClick={() => setShowSidebar(!showSidebar)}
-              className={`px-2 pt-[4.5rem] transition-all duration-500 absolute sm:static w-full bg-white sm:border-r sm:overflow-hidden h-screen overflow-auto ${
+              className={` pt-[4.5rem] transition-all duration-500 absolute sm:static w-full sm:border-r sm:overflow-hidden h-screen overflow-auto ${
                 showSidebar
                   ? "-left-[642px] sm:w-[250px]  "
-                  : "-left-[0px] sm:w-[50px]"
+                  : "-left-[0px] sm:w-[57px]"
               }`}
             />
             <main className="flex-grow pt-[4.5rem] h-screen overflow-auto bg-blue-50">
@@ -47,9 +54,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Main />} />
+          <Route index element={<Dashboard />} />
           <Route path="/MyDashboard/Buttons" element={<AllButton />} />
-          <Route path="/MyDashboard/Login" element={<Login />} />
+          <Route path="/MyDashboard/Forms/Login" element={<Login2 />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

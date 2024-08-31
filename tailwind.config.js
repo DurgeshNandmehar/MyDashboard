@@ -9,11 +9,13 @@ export default {
         light: "#dcfce7",
         dark: "#16a34a",
       },
+
       backgroundImage: {
         bgImage: "url('/src/assets/bg.jpg')",
         leftArrow: "url('/src/assets/left-chevron.png')",
         rightArrow: "url('/src/assets/chevron.png')",
         notFound: "url('/src/assets/Not-Found.svg')",
+        loginBg: "url('/src/assets/loginArt.png')",
       },
     },
   },
