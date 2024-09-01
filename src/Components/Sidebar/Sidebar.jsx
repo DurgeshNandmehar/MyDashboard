@@ -26,7 +26,7 @@ const Sidebar = ({ onClick, className }) => {
     },
     {
       id: 3,
-      title: { name: "Component", icons: <CgComponents size={24} /> },
+      title: { name: "Component", icons: <CgComponents size={25} /> },
       data: [
         {
           name: "Accordian",

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaCircle } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FlexBetweenCenter, FlexVCenter } from "../Components/index";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -35,20 +35,22 @@ const Accordion = ({ title, data = [], onClick }) => {
         <ul className="py-2 ps-11 ">
           {data.map((link, index) => (
             <li key={index} className="h-[35px] flex items-center ">
-              <span className="flex gap-2 items-center hover:text-dark">
+              <NavLink
+                to={link.path}
+                className={({ isActive }) =>
+                  `translate-y-[-1px] flex gap-2 items-center ${
+                    isActive ? "text-dark" : ""
+                  }`
+                }
+                onClick={
+                  window.innerWidth >= 0 && window.innerWidth <= 639
+                    ? onClick
+                    : null
+                }
+              >
                 <FaCircle size={6} />
-                <Link
-                  to={link.path}
-                  className="translate-y-[-1px]"
-                  onClick={
-                    window.innerWidth >= 0 && window.innerWidth <= 639
-                      ? onClick
-                      : null
-                  }
-                >
-                  {link.name}
-                </Link>
-              </span>
+                {link.name}
+              </NavLink>
             </li>
           ))}
         </ul>

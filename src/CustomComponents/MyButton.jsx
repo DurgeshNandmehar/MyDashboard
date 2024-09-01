@@ -2,11 +2,13 @@ import React from "react";
 
 const MyButton = ({
   type = "button",
+  disabled = "",
   children = "Button",
   size = "sm",
   rounded = "rounded-none",
   bgColor = "bg-red-500",
   className,
+
   onClick,
 }) => {
   const sizes = {
@@ -27,8 +29,9 @@ const MyButton = ({
   return (
     <button
       type={type}
-      className={` ${sizes[size]} ${roundeds[rounded]} ${bgColor} text-white ${className}`}
+      className={` ${sizes[size]} ${roundeds[rounded]} ${bgColor} text-white text-nowrap ${className}`}
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>

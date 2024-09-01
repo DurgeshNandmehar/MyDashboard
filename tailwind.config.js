@@ -16,6 +16,7 @@ export default {
         rightArrow: "url('/src/assets/chevron.png')",
         notFound: "url('/src/assets/Not-Found.svg')",
         loginBg: "url('/src/assets/loginArt.png')",
+        loginBgRight: "url('/src/assets/bgLogin.png')",
       },
     },
   },
