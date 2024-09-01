@@ -85,7 +85,7 @@ const Login2 = () => {
                 {data.label}
               </label>
               <div
-                className={`border rounded-md ${
+                className={`border rounded-md focus-within:border-[#162D3A] ${
                   error[data.name] != "" && error[data.name] != undefined
                     ? "border-red-600"
                     : ""
